@@ -25,7 +25,22 @@ body {
 
 #Header1 {
 	text-align: center;
-	margin: 5%;
+	margin: 2%;
 	font-size: 50px;
-	
+}
+
+#AboutPage {
+	text-align: center;
+	margin: 5%;
+	font-size: 25px;
+}
+
+.navbar li a{
+	text-decoration: none;
+
+}
+
+.navbar li {
+	display: inline-flex;
+	padding: 0px 20px;
 }
