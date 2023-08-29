@@ -32,15 +32,19 @@ body {
 #AboutPage {
 	text-align: center;
 	margin: 5%;
-	font-size: 25px;
+	font-size: 23px;
 }
 
 .navbar li a{
 	text-decoration: none;
-
+	font-size: 20px;
 }
 
 .navbar li {
 	display: inline-flex;
 	padding: 0px 20px;
+}
+
+.navbar li a :hover {
+	
 }
