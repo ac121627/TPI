@@ -1,1 +1,3 @@
-console.log("wassup")
+const temp = document.getElementById("temp");
+
+temp.innerText = "Testing!";
