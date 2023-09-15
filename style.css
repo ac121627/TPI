@@ -1,221 +1,247 @@
+/* Styling for the body of the page */
 body {
-	background: linear-gradient(135deg, #394251, #3C3F5D, #870312, #870312);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	font-family:Arial, Helvetica, sans-serif;
-	height: 100vh;
-	margin: 0;
-	padding: 0;	
-}
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    background: linear-gradient(135deg, black, #870312, grey);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
+/* Animation for the background gradient */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Styling for the main header */
 #Header {
     text-align: center;
     margin: 5%;
     transition: all 0.5s ease 0s;
-	font-size: 55px;
-	color: white;
+    font-size: 55px;
+    color: white;
 }
+
+/* Styling for the secondary header */
 #HeaderA {
-	text-align: center;
-	margin: 2%;
-	font-size: 50px;
-	color: white;
+    text-align: center;
+    margin: 2%;
+    font-size: 50px;
+    color: white;
 }
+
+/* Styling for the quiz page header */
 #HeaderQuiz {
-	text-align: center;
-	color: white;
+    text-align: center;
+    color: white;
 }
+
+/* Styling for the about page content */
 #AboutPage {
-	text-align: center;
-	margin: 5%;
-	font-size: 23px;
-	color: white;
+    text-align: center;
+    margin: 5%;
+    font-size: 23px;
+    color: white;
 }
 
+/* Styling for quiz-related text */
 .quiz {
-	color: white;
-	text-align: center;
-	font-size: 20px;
+    color: white;
+    text-align: center;
+    font-size: 20px;
 }
+
+/* Styling for the navigation bar */
 .navbar {
-	background-color: black;
-	padding: 15px;
-	margin-top: 0;
+    background-color: black;
+    padding: 15px;
+    margin-top: 0;
 }
-.navbar li a{
-	text-decoration: none;
-	transition: all 0.5s ease 0s;
-	color: grey;
+
+/* Styling for navigation links */
+.navbar li a {
+    text-decoration: none;
+    transition: all 0.5s ease 0s;
+    color: grey;
 }
+
+/* Styling for navigation list items */
 .navbar li {
-	display: inline-flex;
-	padding: 0px 20px;
+    display: inline-flex;
+    padding: 0px 20px;
 }
+
+/* Styling for navigation links on hover */
 .navbar li a:hover {
-	font-size: 20px;
-	color:rgb(255, 255, 255);
+    font-size: 20px;
+    color: rgb(255, 255, 255);
 }
 
+/* Styling for the footer */
 .footer {
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	color: white;
-	text-align: center;
-	text-decoration: none;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    text-decoration: none;
 }
+
+/* Styling for footer links */
 .footer a {
-	text-decoration: none;
-	color:grey;
-	transition: all 1s ease 0s;
+    text-decoration: none;
+    color: grey;
+    transition: all 1s ease 0s;
 }
+
+/* Styling for footer links on hover */
 .footer a:hover {
-	color: rgb(255, 255, 255);
-	transition: all 1s ease 0s;
+    color: rgb(255, 255, 255);
+    transition: all 1s ease 0s;
 }
 
+/* Styling for information text */
 #info {
-	text-align: center;
-	margin: 5%;
-	font-size: 23px;
-	color: white;
+    text-align: center;
+    margin: 5%;
+    font-size: 23px;
+    color: white;
 }
 
+/* Styling for the quiz box container */
 .quizbox {
-	width:35%;
-	background-color:rgb(0, 0, 0);
-	height: 55%;
-	color: white;
-	margin: 7% auto;
+	height: 40%;
+    width: 35%;
+    background-color: black;
+    color: white;
+    margin: 7% auto;
 	margin-top: 3%;
-	padding: 12.5px;
-	border-radius: 5%;
-	justify-content: center;
-	align-items: center;
-	display: flex;
+    padding: 12.5px;
+    border-radius: 7%;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
 }
-.btn {
-	justify-content: center;
-	align-items: center;
-	display: flex;
-}
-.cssbuttons-io {
-	position: relative;
-	font-family: inherit;
-	font-weight: 500;
-	font-size: 18px;
-	letter-spacing: 0.05em;
-	border-radius: 0.8em;
-	border: none;
-	background: linear-gradient(to right, #8e2de2, #4a00e0);
-	color: ghostwhite;
-	overflow: hidden;
-  }
-  .cssbuttons-io svg {
-	width: 1.2em;
-	height: 1.2em;
-	margin-right: 0.5em;
-  }
-  .cssbuttons-io span {
-	position: relative;
-	z-index: 10;
-	transition: color 0.4s;
-	display: inline-flex;
-	align-items: center;
-	padding: 0.8em 1.2em 0.8em 1.05em;
-  }
-  .cssbuttons-io::before,
-  .cssbuttons-io::after {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 0;
-  }
-  .cssbuttons-io::before {
-	content: "";
-	background: #000;
-	width: 120%;
-	left: -10%;
-	transform: skew(30deg);
-	transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
-  }
-  .cssbuttons-io:hover::before {
-	transform: translate3d(100%, 0, 0);
-  }
-  .cssbuttons-io:active {
-	transform: scale(0.95);
-  }
-  
-  .inputbox {
-	position: relative;
-	width: 196px;
-	justify-content: center;
-	align-items: center;
-	display: flex;
 
-  }
-  
-  .inputbox input {
+/* Styling for the button container */
+.btn {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/* Styling for the play button */
+.cssbuttons-io {
+    position: relative;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    border-radius: 0.8em;
+    border: none;
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    color: ghostwhite;
+    overflow: hidden;
+}
+
+/* Styling for the button's SVG icon */
+.cssbuttons-io svg {
+    width: 1.2em;
+    height: 1.2em;
+    margin-right: 0.5em;
+}
+
+/* Styling for the button's text span */
+.cssbuttons-io span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8em 1.2em 0.8em 1.05em;
+}
+
+/* Styling for the button's pseudo-elements */
+.cssbuttons-io::before,
+.cssbuttons-io::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* Styling for the button's before pseudo-element */
+.cssbuttons-io::before {
+    content: "";
+    background: #000;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+/* Styling for the button's before pseudo-element on hover */
+.cssbuttons-io:hover::before {
+    transform: translate3d(100%, 0, 0);
+}
+
+/* Styling for the button on active state */
+.cssbuttons-io:active {
+    transform: scale(0.95);
+}
+
+.form-control {
 	position: relative;
-	width: 100%;
-	padding: 20px 10px 10px;
-	background: transparent;
-	outline: none;
-	box-shadow: none;
-	border: none;
-	color: #23242a;
-	font-size: 1em;
-	letter-spacing: 0.05em;
-	transition: 0.5s;
-	z-index: 10;
+	margin: 20px 0 40px;
+	width: 190px;
   }
   
-  .inputbox span {
+  .form-control input {
+	background-color: transparent;
+	border: 0;
+	border-bottom: 2px #fff solid;
+	display: block;
+	width: 100%;
+	padding: 15px 0;
+	font-size: 18px;
+	color: #fff;
+  }
+  
+  .form-control input:focus,
+  .form-control input:valid {
+	outline: 0;
+	border-bottom-color: lightblue;
+  }
+  
+  .form-control label {
 	position: absolute;
+	top: 15px;
 	left: 0;
-	padding: 20px 10px 10px;
-	font-size: 1em;
-	color: #8f8f8f;
-	letter-spacing: 00.05em;
-	transition: 0.5s;
 	pointer-events: none;
   }
   
-  .inputbox input:valid ~span,
-  .inputbox input:focus ~span {
-	color: #45f3ff;
-	transform: translateX(-10px) translateY(-34px);
-	font-size: 0,75em;
+  .form-control label span {
+	display: inline-block;
+	font-size: 18px;
+	min-width: 5px;
+	color: #fff;
+	transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
   
-  .inputbox i {
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	height: 2px;
-	background: #45f3ff;
-	border-radius: 4px;
-	transition: 0.5s;
-	pointer-events: none;
-	z-index: 9;
-  }
-  
-  .inputbox input:valid ~i,
-  .inputbox input:focus ~i {
-	height: 44px;
+  .form-control input:focus+label span,
+  .form-control input:valid+label span {
+	color: lightblue;
+	transform: translateY(-30px);
   }
