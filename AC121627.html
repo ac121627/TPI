@@ -1,56 +1,150 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <!-- Link to the Quiz page -->
-    <link rel="Quiz" href="Quiz.html" /> 
-    
-    <!-- Link to external stylesheet -->
-    <link rel="stylesheet" href="style.css"/>
-    
-    <!-- Character set declaration -->
+    <!-- Set character encoding -->
     <meta charset="UTF-8" />
-    
-    <!-- Title of the page -->
+    <!-- Define compatibility for Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Set the viewport to control layout on different devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Set the title of the web page -->
     <title>Te Reo Māori Quiz</title>
-    
-    <!-- Link to the About page -->
-    <link rel="aboutPage" href="about.html"/>
-    
-    <!-- Defer JavaScript file -->
-    <script defer src="PlayQuiz.js"></script>
+    <!-- Link to an external CSS file for styling -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div> 
-        <nav>
-            <ul class="navbar">
-                <!-- Navigation links to Home and About pages -->
-                <li><a href="AC121627.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
+    <!-- The main content area of the page -->
+    <main class="main">
+        <!-- The header section containing the logo and navigation -->
+        <header class="header">
+            <!-- Link to the home page represented by the logo -->
+            <a href="#" class="logo">MāoriQuiz.</a>
+
+            <!-- Navigation menu with links -->
+            <nav class="navbar">
+                <!-- Active link for the current page (Home) -->
+                <a href="" class="active">Home</a>
+                <!-- Link to the 'About' page -->
+                <a href="">About</a>
+            </nav>
+        </header>
+
+        <!-- Container for the quiz section -->
+        <div class="container">
+            <!-- Section containing the quiz content -->
+            <section class="quiz-section">
+                <!-- Container for the quiz box -->
+                <div class="quiz-box">
+
+                    <!-- Main quiz heading -->
+                    <h1>Māori Quiz</h1>
+
+                    <!-- Header section within the quiz box -->
+                    <div class="quiz-header">
+                        <!-- Subtitle for the quiz -->
+                        <span>Maori Quiz</span>
+                        <!-- Display the current score -->
+                        <span class="header-score">Score: 0 / 5</span>
+                    </div>
+
+                    <!-- Main question text -->
+                    <h2 class="question-text">What is the Māori word for Hello?</h2>
+
+                    <!-- Container for displaying answer options -->
+                    <div class="option-list">
+                        <!-- Answer options (commented out) -->
+                        <!--<div class="option">
+                            <span>A. Papa</span>
+                        </div>
+                        <div class="option">
+                            <span>B. Kia Ora</span>
+                        </div>
+                        <div class="option">
+                            <span>C. Manaakitanga</span>
+                        </div>
+                        <div class="option">
+                            <span>D. Haere ra</span>
+                        </div>-->
+                    </div>
+
+                    <!-- Footer section within the quiz box -->
+                    <div class="quiz-footer">
+                        <!-- Display the current question number -->
+                        <span class="question-total">1 of 5 Questions</span>
+                        <!-- Button to navigate to the next question -->
+                        <button class="next-btn">Next</button>
+                    </div>
+                </div>
+
+                <!-- Container for displaying quiz results -->
+                <div class="result-box">
+                    <!-- Result heading -->
+                    <h2>Quiz Result!</h2>
+                    <!-- Container for displaying the quiz score -->
+                    <div class="percentage-container">
+                        <!-- Circular progress display -->
+                        <div class="circular-progress">
+                            <!-- Display the percentage score -->
+                            <span class="progress-value">0%</span>
+                        </div>
+
+                        <!-- Display the final score -->
+                        <span class="score-text">Your score 0 out of 5</span>
+                    </div>
+
+                    <!-- Buttons for restarting the quiz or returning to the home page -->
+                    <div class="buttons">
+                        <button class="tryAgain-btn">Try Again</button>
+                        <button class="goHome-btn">Go To Home</button>
+                    </div>
+                </div>
+            </section>
+            <!-- End of quiz section -->
+
+            <!-- Section for the home page content -->
+            <section class="home">
+                <!-- Container for home page content -->
+                <div class="home-content">
+                    <!-- Main heading for the home page -->
+                    <h1>Te Reo Māori Quiz</h1>
+                    <!-- Description of the quiz and instructions -->
+                    <p>Test your knowledge of the Māori language with our quiz. The quiz consists of 3 levels, each
+                        containing 5 questions. You'll have the opportunity to answer a series of questions related to
+                        Māori words.
+                        <br><br>Choose your level, and see how many questions you can answer correctly!
+                    </p>
+                    <!-- Button to start the quiz -->
+                    <button class="start-btn">Start Quiz</button>
+                </div>
+            </section>
+            <!-- End of home section -->
+        </div>
+        <!-- End of container -->
+    </main>
+
+    <!-- Popup information box -->
+    <div class="popup-info">
+        <!-- Heading for the popup -->
+        <h2>Quiz Guide</h2>
+        <!-- Informational messages -->
+        <span class="info">1. This is how to play the Te reo </span>
+        <span class="info">2. This is how to play the Te reo Maori quiz</span>
+        <span class="info">3. This is how to play the Te </span>
+        <span class="info">4. This is how to play the Te reo Maori quiz</span>
+        <span class="info">5. This is how to play the Te reo Maori quiz</span>
+
+        <!-- Buttons to exit the quiz or continue -->
+        <div class="btn-group">
+            <button class="info-btn exit-btn">Exit Quiz</button>
+            <a href="#" class="info-btn continue-btn">Continue</a>
+        </div>
     </div>
 
-    <div>
-        <!-- Header -->
-        <h1 id="Header">Dive into the World of Te Reo Māori</h1>
-        
-        <!-- Introduction and instructions -->
-        <p id="info">Test your knowledge of the Māori language with our quiz. The quiz consists of 3 levels, each containing 5 questions. You'll have the opportunity to answer a series of questions related to Māori words.</p>
-        <p id="info">Choose your level, and see how many questions you can answer correctly!</p>
-    </div>
-
-    <div class="footer">
-        <!-- Footer with a link and credits -->
-        <a href="https://github.com/ac121627/TPI" target="_blank">All Credits Reserved To Faiaz Abdullah for creating this website.</a>
-    </div>
-
-    <div class="btn">
-        <!-- Button to start the quiz -->
-        <a href="Quiz.html">
-            <button class="cssbuttons-io">
-                <span>Play Quiz!</span>
-            </button>
-        </a>        
-    </div>
+    <!-- JavaScript files for functionality -->
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

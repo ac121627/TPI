@@ -1,247 +1,500 @@
-/* Styling for the body of the page */
-body {
-    background: linear-gradient(135deg, black, #870312, grey);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    font-family: Arial, Helvetica, sans-serif;
-    height: 100vh;
+/* Import Google Fonts 'Poppins' for the entire document */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Reset default styles and apply a common font family */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Animation for the background gradient */
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+/* Styling for the entire body */
+body {
+    color: #fff; /* Text color */
+    background: #09001d; /* Background color */
+    overflow: hidden; /* Hide horizontal overflow content */
 }
 
-/* Styling for the main header */
-#Header {
-    text-align: center;
-    margin: 5%;
-    transition: all 0.5s ease 0s;
-    font-size: 55px;
-    color: white;
-}
-
-/* Styling for the secondary header */
-#HeaderA {
-    text-align: center;
-    margin: 2%;
-    font-size: 50px;
-    color: white;
-}
-
-/* Styling for the quiz page header */
-#HeaderQuiz {
-    text-align: center;
-    color: white;
-}
-
-/* Styling for the about page content */
-#AboutPage {
-    text-align: center;
-    margin: 5%;
-    font-size: 23px;
-    color: white;
-}
-
-/* Styling for quiz-related text */
-.quiz {
-    color: white;
-    text-align: center;
-    font-size: 20px;
-}
-
-/* Styling for the navigation bar */
-.navbar {
-    background-color: black;
-    padding: 15px;
-    margin-top: 0;
-}
-
-/* Styling for navigation links */
-.navbar li a {
-    text-decoration: none;
-    transition: all 0.5s ease 0s;
-    color: grey;
-}
-
-/* Styling for navigation list items */
-.navbar li {
-    display: inline-flex;
-    padding: 0px 20px;
-}
-
-/* Styling for navigation links on hover */
-.navbar li a:hover {
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-}
-
-/* Styling for the footer */
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-}
-
-/* Styling for footer links */
-.footer a {
-    text-decoration: none;
-    color: grey;
-    transition: all 1s ease 0s;
-}
-
-/* Styling for footer links on hover */
-.footer a:hover {
-    color: rgb(255, 255, 255);
-    transition: all 1s ease 0s;
-}
-
-/* Styling for information text */
-#info {
-    text-align: center;
-    margin: 5%;
-    font-size: 23px;
-    color: white;
-}
-
-/* Styling for the quiz box container */
-.quizbox {
-	height: 40%;
-    width: 35%;
-    background-color: black;
-    color: white;
-    margin: 7% auto;
-	margin-top: 3%;
-    padding: 12.5px;
-    border-radius: 7%;
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center elements horizontally */
-}
-
-/* Styling for the button container */
-.btn {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-
-/* Styling for the play button */
-.cssbuttons-io {
-    position: relative;
-    font-family: inherit;
-    font-weight: 500;
-    font-size: 18px;
-    letter-spacing: 0.05em;
-    border-radius: 0.8em;
-    border: none;
-    background: linear-gradient(to right, #8e2de2, #4a00e0);
-    color: ghostwhite;
-    overflow: hidden;
-}
-
-/* Styling for the button's SVG icon */
-.cssbuttons-io svg {
-    width: 1.2em;
-    height: 1.2em;
-    margin-right: 0.5em;
-}
-
-/* Styling for the button's text span */
-.cssbuttons-io span {
-    position: relative;
-    z-index: 10;
-    transition: color 0.4s;
-    display: inline-flex;
-    align-items: center;
-    padding: 0.8em 1.2em 0.8em 1.05em;
-}
-
-/* Styling for the button's pseudo-elements */
-.cssbuttons-io::before,
-.cssbuttons-io::after {
-    position: absolute;
+/* Styling for the header section */
+.header {
+    position: fixed; /* Fixed position at the top of the page */
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    z-index: 0;
+    padding: 20px 10%; /* Padding for content */
+    background: transparent; /* Transparent background */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Align items vertically */
+    z-index: 100; /* Layer order (above other elements) */
 }
 
-/* Styling for the button's before pseudo-element */
-.cssbuttons-io::before {
-    content: "";
-    background: #000;
-    width: 120%;
-    left: -10%;
-    transform: skew(30deg);
-    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+/* Styling for the logo in the header */
+.logo {
+    font-size: 32px; /* Font size */
+    color: #fff; /* Text color */
+    text-decoration: none; /* Remove underlines from links */
+    font-weight: 700; /* Font weight */
+    filter: drop-shadow(0 0 5px #09001d); /* Text shadow */
 }
 
-/* Styling for the button's before pseudo-element on hover */
-.cssbuttons-io:hover::before {
-    transform: translate3d(100%, 0, 0);
+/* Styling for navigation links in the header */
+.navbar a {
+    font-size: 18px; /* Font size */
+    color: #fff; /* Text color */
+    text-decoration: none; /* Remove underlines from links */
+    font-weight: 500; /* Font weight */
+    margin-left: 35px; /* Left margin */
+    transition: .3s; /* Smooth transition effect */
 }
 
-/* Styling for the button on active state */
-.cssbuttons-io:active {
-    transform: scale(0.95);
+/* Hover and active states for navigation links */
+.navbar a:hover,
+.navbar a.active {
+    color: #c40094; /* Change color on hover/active */
 }
 
-.form-control {
-	position: relative;
-	margin: 20px 0 40px;
-	width: 190px;
-  }
-  
-  .form-control input {
-	background-color: transparent;
-	border: 0;
-	border-bottom: 2px #fff solid;
-	display: block;
-	width: 100%;
-	padding: 15px 0;
-	font-size: 18px;
-	color: #fff;
-  }
-  
-  .form-control input:focus,
-  .form-control input:valid {
-	outline: 0;
-	border-bottom-color: lightblue;
-  }
-  
-  .form-control label {
-	position: absolute;
-	top: 15px;
-	left: 0;
-	pointer-events: none;
-  }
-  
-  .form-control label span {
-	display: inline-block;
-	font-size: 18px;
-	min-width: 5px;
-	color: #fff;
-	transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  
-  .form-control input:focus+label span,
-  .form-control input:valid+label span {
-	color: lightblue;
-	transform: translateY(-30px);
-  }
+/* Styling for the main content container */
+.main {
+    min-height: 100vh; /* Minimum height for the entire viewport */
+    background: url('background.jpg') no-repeat; /* Background image */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background */
+    pointer-events: auto; /* Enable pointer events */
+    transition: .3s ease; /* Smooth transition effect */
+}
+
+/* Active state for the main content */
+.main.active {
+    filter: blur(15px); /* Apply blur effect */
+    pointer-events: none; /* Disable pointer events */
+}
+
+/* Styling for the main content container and its children */
+.container {
+    display: flex; /* Use flexbox for layout */
+    height: 100vh; /* Full height for the viewport */
+    width: 200%; /* Double the width for slide effect */
+}
+
+/* Styling for the home section */
+.home {
+    position: relative; /* Relative positioning */
+    left: -50%; /* Shift content to the left */
+    width: 100%; /* Full width */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+/* Styling for the home content */
+.home-content {
+    max-width: 600px; /* Maximum width for content */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center content vertically */
+    flex-direction: column; /* Center content horizontally */
+}
+
+/* Styling for the home content heading */
+.home-content h1 {
+    font-size: 65px; /* Font size */
+    font-weight: 700; /* Font weight */
+    text-shadow: 0 0 10px rgba(0, 0, 0, .3); /* Text shadow */
+}
+
+/* Styling for the home content paragraph */
+.home-content p {
+    font-size: 16px; /* Font size */
+    text-align: center; /* Center-align text */
+    text-shadow: 0 0 10px rgba(0, 0, 0, .3); /* Text shadow */
+    margin-bottom: 30px; /* Bottom margin */
+}
+
+/* Styling for the "Start Quiz" button in the home content */
+.home-content .start-btn {
+    width: 190px; /* Button width */
+    height: 55px; /* Button height */
+    background: #c40094; /* Background color */
+    border: 2px solid #fff; /* Border style */
+    outline: none; /* Remove outline */
+    border-radius: 6px; /* Border radius */
+    box-shadow: 0 0 10px #c40094; /* Box shadow */
+    font-size: 18px; /* Font size */
+    color: #fff; /* Text color */
+    letter-spacing: 1px; /* Letter spacing */
+    font-weight: 600; /* Font weight */
+    cursor: pointer; /* Pointer cursor */
+    transition: .5s; /* Smooth transition effect */
+}
+
+/* Hover state for the "Start Quiz" button */
+.home-content .start-btn:hover {
+    background: #09001d; /* Change background color on hover */
+    box-shadow: none; /* Remove box shadow on hover */
+}
+
+/* Styling for the popup information box */
+.popup-info {
+    position: absolute; /* Absolute positioning */
+    top: 50%; /* Position at the vertical center */
+    left: 50%; /* Position at the horizontal center */
+    transform: translate(-50%, -50%) scale(.9); /* Center and scale down */
+    width: 500px; /* Box width */
+    background: #fff; /* Background color */
+    border-radius: 6px; /* Border radius */
+    padding: 10px 25px; /* Padding */
+    opacity: 0; /* Hidden by default */
+    pointer-events: none; /* Disable pointer events */
+    transition: .3s ease; /* Smooth transition effect */
+}
+
+/* Active state for the popup information box */
+.popup-info.active {
+    opacity: 1; /* Visible when active */
+    pointer-events: auto; /* Enable pointer events */
+    transform: translate(-50%, -50%) scale(1); /* Scale up */
+}
+
+/* Styling for the popup information box heading */
+.popup-info h2 {
+    font-size: 50px; /* Font size */
+    color: #c40094; /* Text color */
+}
+
+/* Styling for the informational text in the popup */
+.popup-info .info {
+    display: inline-block; /* Inline block display */
+    font-size: 16px; /* Font size */
+    color: #333; /* Text color */
+    font-weight: 500; /* Font weight */
+    margin: 4px 0; /* Margin */
+}
+
+/* Styling for the button group in the popup */
+.popup-info .btn-group {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Align items vertically */
+    border-top: 1px solid #999; /* Top border */
+    margin-top: 10px; /* Top margin */
+    padding: 15px 0 7px; /* Padding */
+}
+
+/* Styling for the buttons in the popup */
+.popup-info .btn-group .info-btn {
+    display: inline-flex; /* Inline flex display */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    width: 130px; /* Button width */
+    height: 45px; /* Button height */
+    background: #c40094; /* Background color */
+    border: 2px solid #c40094; /* Border style */
+    outline: none; /* Remove outline */
+    border-radius: 6px; /* Border radius */
+    text-decoration: none; /* Remove text decoration */
+    font-size: 16px; /* Font size */
+    color: #fff; /* Text color */
+    font-weight: 600; /* Font weight */
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1); /* Box shadow */
+    cursor: pointer; /* Pointer cursor */
+    transition: .5s; /* Smooth transition effect */
+}
+
+/* Styling for the first button in the button group */
+.popup-info .btn-group .info-btn:nth-child(1) {
+    background: transparent; /* Transparent background */
+    color: #c40094; /* Text color */
+}
+
+/* Hover state for the first button in the button group */
+.popup-info .btn-group .info-btn:nth-child(1):hover {
+    background: #c40094; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+}
+
+/* Hover state for the second button in the button group */
+.popup-info .btn-group .info-btn:nth-child(2):hover {
+    background: #950170; /* Change background color on hover */
+    border-color: #950170; /* Change border color on hover */
+}
+
+/* Styling for the quiz section */
+.quiz-section {
+    position: relative; /* Relative positioning */
+    left: -50%; /* Shift content to the left */
+    width: 100%; /* Full width */
+    background: #09001d; /* Background color */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    z-index: 100; /* Layer order (above other elements) */
+    transition: .8s ease-in-out; /* Smooth transition effect */
+    transition-delay: .25s; /* Delayed transition */
+}
+
+/* Active state for the quiz section */
+.quiz-section.active {
+    left: 0; /* Slide content to the left */
+}
+
+/* Styling for the quiz box */
+.quiz-section .quiz-box {
+    position: relative; /* Relative positioning */
+    width: 500px; /* Box width */
+    background: transparent; /* Transparent background */
+    border: 2px solid #c40094; /* Border style */
+    border-radius: 6px; /* Border radius */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    padding: 20px 30px; /* Padding */
+    opacity: 0; /* Hidden by default */
+    pointer-events: none; /* Disable pointer events */
+    transform: scale(.9); /* Scale down */
+    transition: .3s ease; /* Smooth transition effect */
+    transition-delay: 0s; /* No delay */
+}
+
+/* Active state for the quiz box */
+.quiz-section .quiz-box.active {
+    opacity: 1; /* Visible when active */
+    pointer-events: auto; /* Enable pointer events */
+    transform: scale(1); /* Normal scale */
+    transition: 1s ease; /* Smooth transition effect */
+    transition-delay: 1s; /* Delayed transition */
+}
+
+/* Styling for the quiz box heading */
+.quiz-box h1 {
+    font-size: 32px; /* Font size */
+    text-align: center; /* Center-align text */
+    background: linear-gradient(45deg, transparent, #c40094, transparent); /* Gradient background */
+    border-radius: 6px; /* Border radius */
+}
+
+/* Styling for the quiz header */
+.quiz-box .quiz-header {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Align items vertically */
+    padding: 20px 0; /* Padding */
+    border-bottom: 2px solid #c40094; /* Bottom border */
+    margin-bottom: 30px; /* Bottom margin */
+}
+
+/* Styling for elements within the quiz header */
+.quiz-header span {
+    font-size: 18px; /* Font size */
+    font-weight: 500; /* Font weight */
+}
+
+/* Styling for the header score */
+.quiz-header .header-score {
+    background: #c40094; /* Background color */
+    border-radius: 3px; /* Border radius */
+    padding: 7px; /* Padding */
+}
+
+/* Styling for the question text */
+.quiz-box .question-text {
+    font-size: 24px; /* Font size */
+    font-weight: 600; /* Font weight */
+}
+
+/* Styling for the option list */
+.option-list .option {
+    width: 100%; /* Full width */
+    padding: 12px; /* Padding */
+    background: transparent; /* Transparent background */
+    border: 2px solid rgba(255, 255, 255, .2); /* Border style */
+    border-radius: 4px; /* Border radius */
+    font-size: 17px; /* Font size */
+    margin: 15px 0; /* Margin */
+    cursor: pointer; /* Pointer cursor */
+}
+
+/* Hover state for options in the option list */
+.option-list .option:hover {
+    background: rgba(255, 255, 255, .1); /* Change background color on hover */
+    border-color: rgba(255, 255, 255, .1); /* Change border color on hover */
+}
+
+/* Styling for correct options in the option list */
+.option-list .option.correct {
+    background: #09001d; /* Background color */
+    color: #00a63d; /* Text color */
+    border-color: #00a63d; /* Border color */
+}
+
+/* Styling for incorrect options in the option list */
+.option-list .option.incorrect {
+    background: #09001d; /* Background color */
+    color: #a60045; /* Text color */
+    border-color: #a60045; /* Border color */
+}
+
+/* Styling for disabled options in the option list */
+.option-list .option.disabled {
+    pointer-events: none; /* Disable pointer events */
+}
+
+/* Styling for the quiz footer */
+.quiz-box .quiz-footer {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Align items vertically */
+    border-top: 2px solid #c40094; /* Top border */
+    padding-top: 20px; /* Top padding */
+    margin-top: 25px; /* Top margin */
+}
+
+/* Styling for the question total text in the quiz footer */
+.quiz-footer .question-total {
+    font-size: 16px; /* Font size */
+    font-weight: 600; /* Font weight */
+}
+
+/* Styling for the next button in the quiz footer */
+.quiz-footer .next-btn {
+    width: 100px; /* Button width */
+    height: 45px; /* Button height */
+    background: rgba(255, 255, 255, .1); /* Background color */
+    border: rgba(255, 255, 255, .1); /* Border style */
+    outline: none; /* Remove outline */
+    border-radius: 6px; /* Border radius */
+    font-size: 16px; /* Font size */
+    color: rgba(255, 255, 255, .3); /* Text color */
+    font-weight: 600; /* Font weight */
+    cursor: pointer; /* Pointer cursor */
+    pointer-events: none; /* Disable pointer events */
+    transition: .5s; /* Smooth transition effect */
+}
+
+/* Active state for the next button */
+.quiz-footer .next-btn.active {
+    pointer-events: auto; /* Enable pointer events */
+    background: #c40094; /* Background color */
+    border-color: #c40094; /* Border color */
+    color: #fff; /* Text color */
+}
+
+/* Hover state for the active next button */
+.quiz-footer .next-btn.active:hover {
+    background: #950170; /* Change background color on hover */
+    border-color: #950170; /* Change border color on hover */
+}
+
+/* Styling for the result box */
+.quiz-section .result-box {
+    position: absolute; /* Absolute positioning */
+    top: 50%; /* Position at the vertical center */
+    left: 50%; /* Position at the horizontal center */
+    transform: translate(-50%, -50%) scale(.9); /* Center and scale down */
+    width: 500px; /* Box width */
+    background: transparent; /* Transparent background */
+    border: 2px solid #c40094; /* Border style */
+    border-radius: 6px; /* Border radius */
+    padding: 20px; /* Padding */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center content horizontally */
+    opacity: 0; /* Hidden by default */
+    pointer-events: none; /* Disable pointer events */
+    transition: .3s ease; /* Smooth transition effect */
+}
+
+/* Active state for the result box */
+.quiz-section .result-box.active {
+    opacity: 1; /* Visible when active */
+    pointer-events: auto; /* Enable pointer events */
+    transform: translate(-50%, -50%) scale(1); /* Scale up */
+}
+
+/* Styling for the result box heading */
+.result-box h2 {
+    font-size: 52px; /* Font size */
+}
+
+/* Styling for the percentage container in the result box */
+.result-box .percentage-container {
+    width: 300px; /* Container width */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center content horizontally */
+    margin: 20px 0 40px; /* Margin */
+}
+
+/* Styling for the circular progress bar */
+.percentage-container .circular-progress {
+    position: relative; /* Relative positioning */
+    width: 250px; /* Progress bar width */
+    height: 250px; /* Progress bar height */
+    background: conic-gradient(#c40094 3.6deg, rgba(255, 255, 255, .1) 0deg); /* Gradient background */
+    border-radius: 50%; /* Border radius */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+/* Styling for the circular progress bar background */
+.percentage-container .circular-progress::before {
+    content: ''; /* Empty content */
+    position: absolute; /* Absolute positioning */
+    width: 210px; /* Background width */
+    height: 210px; /* Background height */
+    background: #09001d; /* Background color */
+    border-radius: 50%; /* Border radius */
+}
+
+/* Styling for the progress value inside the circular progress bar */
+.circular-progress .progress-value {
+    position: relative; /* Relative positioning */
+    font-size: 45px; /* Font size */
+    font-weight: 600; /* Font weight */
+}
+
+/* Styling for the score text in the result box */
+.percentage-container .score-text {
+    font-size: 26px; /* Font size */
+    font-weight: 600; /* Font weight */
+    margin-top: 20px; /* Top margin */
+}
+
+/* Styling for the buttons in the result box */
+.result-box .buttons {
+    display: flex; /* Use flexbox for layout */
+}
+
+/* Styling for all buttons within the result box */
+.buttons button {
+    width: 130px; /* Button width */
+    height: 47px; /* Button height */
+    background: #c40094; /* Background color */
+    border: 2px solid #c40094; /* Border style */
+    outline: none; /* Remove outline */
+    border-radius: 6px; /* Border radius */
+    font-size: 16px; /* Font size */
+    color: #fff; /* Text color */
+    font-weight: 600; /* Font weight */
+    margin: 0 20px 20px; /* Margin */
+    cursor: pointer; /* Pointer cursor */
+    transition: .5s; /* Smooth transition effect */
+}
+
+/* Hover state for the first button in the result box */
+.buttons button:nth-child(1):hover {
+    background: #950170; /* Change background color on hover */
+    border-color: #950170; /* Change border color on hover */
+}
+
+/* Styling for the second button in the result box */
+.buttons button:nth-child(2) {
+    background: transparent; /* Transparent background */
+    color: #c40094; /* Text color */
+}
+
+/* Hover state for the second button in the result box */
+.buttons button:nth-child(2):hover {
+    background: #c40094; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+}
