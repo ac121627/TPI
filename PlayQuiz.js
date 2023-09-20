@@ -9,9 +9,12 @@ const quizBox = document.querySelector('.quiz-box'); // Quiz box container
 const resultBox = document.querySelector('.result-box'); // Result box container
 const tryAgainBtn = document.querySelector('.tryAgain-btn'); // Try again button in the result box
 const goHomeBtn = document.querySelector('.goHome-btn'); // Go home button in the result box
+const levelBtns = document.querySelector('.level-buttons');
 const easyBtn = document.querySelector('.easy-btn');
 const mediumBtn = document.querySelector('.medium-btn');
 const hardBtn = document.querySelector('.hard-btn');
+
+let questionsSelected; // Used for the questions and changes depending on the level selected
 
 // Event handler for the start button click
 startBtn.onclick = () => {
@@ -27,16 +30,20 @@ exitBtn.onclick = () => {
     main.classList.remove('active');
 }
 
+// Each event changes the questionsSelected variable depending on the level chosen
 easyBtn.onclick = () => {
-    
+    questionsSelected = easyQuestions;
+    continueBtn.classList.add('active');
 }
 
 mediumBtn.onclick = () => {
-    
+    questionsSelected = mediumQuestions;
+    continueBtn.classList.add('active');
 }
 
 hardBtn.onclick = () => {
-    
+    questionsSelected = hardQuestions;
+    continueBtn.classList.add('active');
 }
 
 // Event handler for the continue button click
@@ -46,6 +53,8 @@ continueBtn.onclick = () => {
     popupInfo.classList.remove('active');
     main.classList.remove('active');
     quizBox.classList.add('active');
+
+    levelBtns.style = "display: none;" // Hides the level buttons
 
     // Show the first question and update question counter and header score
     showQuestions(0);
@@ -78,6 +87,8 @@ goHomeBtn.onclick = () => {
     nextBtn.classList.remove('active');
     resultBox.classList.remove('active');
 
+    levelBtns.style = "display: block;" // Shows the level buttons
+
     // Reset question count, question number, and user score
     questionCount = 0;
     questionNumb = 1;
@@ -99,7 +110,7 @@ const nextBtn = document.querySelector('.next-btn');
 
 // Event handler for the next button click
 nextBtn.onclick = () => {
-    if (questionCount < questions.length - 1) {
+    if (questionCount < questionsSelected.length - 1) {
         // If there are more questions, move to the next question
         questionCount++;
         showQuestions(questionCount);
@@ -125,13 +136,13 @@ function showQuestions(index) {
     const questionText = document.querySelector('.question-text');
 
     // Set the question text with the question number and content from the questions array
-    questionText.textContent = `${questions[index].numb}. ${questions[index].question}`;
+    questionText.textContent = `${questionsSelected[index].numb}. ${questionsSelected[index].question}`;
 
     // Generate HTML for answer options based on the questions array
-    let optionTag = `<div class="option"><span>${questions[index].options[0]}</span></div>
-    <div class="option"><span>${questions[index].options[1]}</span></div>
-    <div class="option"><span>${questions[index].options[2]}</span></div>
-    <div class="option"><span>${questions[index].options[3]}</span></div>`;
+    let optionTag = `<div class="option"><span>${questionsSelected[index].options[0]}</span></div>
+    <div class="option"><span>${questionsSelected[index].options[1]}</span></div>
+    <div class="option"><span>${questionsSelected[index].options[2]}</span></div>
+    <div class="option"><span>${questionsSelected[index].options[3]}</span></div>`;
 
     // Inject the generated HTML into the optionList element
     optionList.innerHTML = optionTag;
@@ -145,11 +156,10 @@ function showQuestions(index) {
     }
 }
 
-
 // Function to handle user's option selection
 function optionSelected(answer) {
     let userAnswer = answer.textContent;
-    let correctAnswer = questions[questionCount].answer;
+    let correctAnswer = questionsSelected[questionCount].answer;
     let allOptions = optionList.children.length;
 
     if (userAnswer == correctAnswer) {
@@ -181,13 +191,13 @@ function optionSelected(answer) {
 // Function to update the question counter in the header
 function questionCounter(index) {
     const questionTotal = document.querySelector('.question-total');
-    questionTotal.textContent = `${index} of ${questions.length} Questions`;
+    questionTotal.textContent = `${index} of ${questionsSelected.length} Questions`;
 }
 
 // Function to update the header score
 function headerScore() {
     const headerScoreText = document.querySelector('.header-score');
-    headerScoreText.textContent = `Score: ${userScore} / ${questions.length}`;
+    headerScoreText.textContent = `Score: ${userScore} / ${questionsSelected.length}`;
 }
 
 // Function to display the result box
@@ -198,7 +208,7 @@ function showResultBox() {
 
     // Display the user's score and animate the circular progress bar
     const scoreText = document.querySelector('.score-text');
-    scoreText.textContent = `Your score ${userScore} out of ${questions.length}`;
+    scoreText.textContent = `Your score ${userScore} out of ${questionsSelected.length}`;
 
     // References to the circular progress bar elements
     const circularProgress = document.querySelector('.circular-progress');
@@ -206,7 +216,7 @@ function showResultBox() {
 
     // Initialize variables for progress animation
     let progressStartValue = -1; // Initial progress value
-    let progressEndValue = (userScore / questions.length) * 100; // End progress value based on user's score
+    let progressEndValue = (userScore / questionsSelected.length) * 100; // End progress value based on user's score
     let speed = 20; // Speed of the animation
 
     // Create an interval to animate the progress bar

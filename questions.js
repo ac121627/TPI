@@ -1,5 +1,5 @@
 // Define arrays for easy, medium, and hard questions
-let questions = [
+const easyQuestions = [
     {
         numb: 1,
         question: "What is the Māori word for Hello?",
@@ -57,7 +57,7 @@ let questions = [
     }
 ];
 
-let mediumQuestions = [
+const mediumQuestions = [
     {
         numb: 1,
         question: "What is the Māori word for Land?",
@@ -115,7 +115,7 @@ let mediumQuestions = [
     }
 ];
 
-let hardQuestions = [
+const hardQuestions = [
     {
         numb: 1,
         question: "What is the Māori word for Carving?",
