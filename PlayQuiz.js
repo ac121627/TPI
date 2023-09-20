@@ -9,6 +9,9 @@ const quizBox = document.querySelector('.quiz-box'); // Quiz box container
 const resultBox = document.querySelector('.result-box'); // Result box container
 const tryAgainBtn = document.querySelector('.tryAgain-btn'); // Try again button in the result box
 const goHomeBtn = document.querySelector('.goHome-btn'); // Go home button in the result box
+const easyBtn = document.querySelector('.easy-btn');
+const mediumBtn = document.querySelector('.medium-btn');
+const hardBtn = document.querySelector('.hard-btn');
 
 // Event handler for the start button click
 startBtn.onclick = () => {
@@ -22,6 +25,18 @@ exitBtn.onclick = () => {
     // Hide popup info and deactivate the main content
     popupInfo.classList.remove('active');
     main.classList.remove('active');
+}
+
+easyBtn.onclick = () => {
+    
+}
+
+mediumBtn.onclick = () => {
+    
+}
+
+hardBtn.onclick = () => {
+    
 }
 
 // Event handler for the continue button click
