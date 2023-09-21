@@ -34,16 +34,25 @@ exitBtn.onclick = () => {
 easyBtn.onclick = () => {
     questionsSelected = easyQuestions;
     continueBtn.classList.add('active');
+    easyBtn.classList.add('active');
+    mediumBtn.classList.remove('active');
+    hardBtn.classList.remove('active');
 }
 
 mediumBtn.onclick = () => {
     questionsSelected = mediumQuestions;
     continueBtn.classList.add('active');
+    mediumBtn.classList.add('active');
+    easyBtn.classList.remove('active');
+    hardBtn.classList.remove('active');
 }
 
 hardBtn.onclick = () => {
     questionsSelected = hardQuestions;
     continueBtn.classList.add('active');
+    hardBtn.classList.add('active');
+    mediumBtn.classList.remove('active');
+    easyBtn.classList.remove('active');
 }
 
 // Event handler for the continue button click
@@ -225,7 +234,7 @@ function showResultBox() {
 
         // Update the displayed progress value and the progress bar background
         progressValue.textContent = `${progressStartValue}%`;
-        circularProgress.style.background = `conic-gradient(#c40094 ${progressStartValue * 3.6}deg, rgba(255, 255, 255, .1) 0deg)`;
+        circularProgress.style.background = `conic-gradient(red ${progressStartValue * 3.6}deg, rgba(255, 255, 255, .1) 0deg)`;
 
         // Check if the animation has reached the end value
         if (progressStartValue == progressEndValue) {

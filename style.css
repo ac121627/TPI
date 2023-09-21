@@ -1,189 +1,213 @@
-/* Import Google Fonts 'Poppins' for the entire document */
+/* Importing the 'Poppins' font from Google Fonts with various weights */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-/* Reset default styles and apply a common font family */
+/* Global CSS Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif; 
 }
 
-/* Styling for the entire body */
+/* Styling the background of the body and setting text color */
 body {
-    color: #fff; /* Text color */
-    background: #09001d; /* Background color */
-    overflow: hidden; /* Hide horizontal overflow content */
+    color: #fff;
+    background: #09001d;
+    overflow: hidden; 
 }
 
-/* Styling for the header section */
+/* Header styling */
 .header {
-    position: fixed; /* Fixed position at the top of the page */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 10%; /* Padding for content */
-    background: transparent; /* Transparent background */
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space between items */
-    align-items: center; /* Align items vertically */
-    z-index: 100; /* Layer order (above other elements) */
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
 }
 
 /* Styling for the logo in the header */
 .logo {
-    font-size: 32px; /* Font size */
-    color: #fff; /* Text color */
-    text-decoration: none; /* Remove underlines from links */
-    font-weight: 700; /* Font weight */
-    filter: drop-shadow(0 0 5px #09001d); /* Text shadow */
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    filter: drop-shadow(0 0 5px #09001d); /* Adding a drop shadow to the logo */
 }
 
-/* Styling for navigation links in the header */
+/* Styling for the navigation links in the header */
 .navbar a {
-    font-size: 18px; /* Font size */
-    color: #fff; /* Text color */
-    text-decoration: none; /* Remove underlines from links */
-    font-weight: 500; /* Font weight */
-    margin-left: 35px; /* Left margin */
-    transition: .3s; /* Smooth transition effect */
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s; 
 }
 
-/* Hover and active states for navigation links */
+/* Styling for navigation links on hover and when active */
 .navbar a:hover,
 .navbar a.active {
-    color: #c40094; /* Change color on hover/active */
+    color: red; 
 }
 
-/* Styling for the main content container */
+/* Main content section styling */
 .main {
-    min-height: 100vh; /* Minimum height for the entire viewport */
-    background: url('background.jpg') no-repeat; /* Background image */
-    background-size: cover; /* Cover the entire container */
-    background-position: center; /* Center the background */
-    pointer-events: auto; /* Enable pointer events */
-    transition: .3s ease; /* Smooth transition effect */
+    min-height: 100vh; 
+    background: url('background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    pointer-events: auto; 
+    transition: .3s ease; 
 }
 
-/* Active state for the main content */
+/* Styling for the active state of the main section */
 .main.active {
-    filter: blur(15px); /* Apply blur effect */
-    pointer-events: none; /* Disable pointer events */
+    filter: blur(15px); 
+    pointer-events: none; 
 }
 
-/* Styling for the main content container and its children */
+/* Footer styling */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Styling for links in the footer */
+.footer a {
+    text-decoration: none;
+    color: dimgray;
+    transition: all 1s ease 0s; 
+}
+
+/* Styling for links in the footer on hover */
+.footer a:hover {
+    color: white; 
+}
+
+/* Container styling */
 .container {
-    display: flex; /* Use flexbox for layout */
-    height: 100vh; /* Full height for the viewport */
-    width: 200%; /* Double the width for slide effect */
+    display: flex;
+    height: 100vh;
+    width: 200%;
 }
 
-/* Styling for the home section */
+/* Home section styling */
 .home {
-    position: relative; /* Relative positioning */
-    left: -50%; /* Shift content to the left */
-    width: 100%; /* Full width */
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
+    position: relative;
+    left: -50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Styling for the home content */
+/* Styling for the content within the home section */
 .home-content {
-    max-width: 600px; /* Maximum width for content */
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center content vertically */
-    flex-direction: column; /* Center content horizontally */
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
-/* Styling for the home content heading */
+/* Styling for the heading within the home section */
 .home-content h1 {
-    font-size: 65px; /* Font size */
-    font-weight: 700; /* Font weight */
-    text-shadow: 0 0 10px rgba(0, 0, 0, .3); /* Text shadow */
+    font-size: 65px;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .3); 
 }
 
-/* Styling for the home content paragraph */
+/* Styling for the paragraph within the home section */
 .home-content p {
-    font-size: 16px; /* Font size */
-    text-align: center; /* Center-align text */
-    text-shadow: 0 0 10px rgba(0, 0, 0, .3); /* Text shadow */
-    margin-bottom: 30px; /* Bottom margin */
+    font-size: 16px;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .3); 
+    margin-bottom: 30px;
 }
 
-/* Styling for the "Start Quiz" button in the home content */
+/* Styling for the start button within the home section */
 .home-content .start-btn {
-    width: 190px; /* Button width */
-    height: 55px; /* Button height */
-    background: #c40094; /* Background color */
-    border: 2px solid #fff; /* Border style */
-    outline: none; /* Remove outline */
-    border-radius: 6px; /* Border radius */
-    box-shadow: 0 0 10px #c40094; /* Box shadow */
-    font-size: 18px; /* Font size */
-    color: #fff; /* Text color */
-    letter-spacing: 1px; /* Letter spacing */
-    font-weight: 600; /* Font weight */
-    cursor: pointer; /* Pointer cursor */
+    width: 190px;
+    height: 55px;
+    background: red;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px red; 
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
     transition: .5s; /* Smooth transition effect */
 }
 
-/* Hover state for the "Start Quiz" button */
+/* Styling for the start button on hover */
 .home-content .start-btn:hover {
-    background: #09001d; /* Change background color on hover */
-    box-shadow: none; /* Remove box shadow on hover */
+    background: #09001d;
+    box-shadow: none; 
 }
-
 /* Styling for the popup information box */
 .popup-info {
-    position: absolute; /* Absolute positioning */
-    top: 50%; /* Position at the vertical center */
-    left: 50%; /* Position at the horizontal center */
-    transform: translate(-50%, -50%) scale(.9); /* Center and scale down */
-    width: 500px; /* Box width */
-    background: #fff; /* Background color */
-    border-radius: 6px; /* Border radius */
-    padding: 10px 25px; /* Padding */
-    opacity: 0; /* Hidden by default */
-    pointer-events: none; /* Disable pointer events */
-    transition: .3s ease; /* Smooth transition effect */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.9);
+    width: 500px;
+    background: #fff;
+    border-radius: 6px;
+    padding: 10px 25px;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease;
 }
 
-/* Active state for the popup information box */
+/* Styling for the active state of the popup information box */
 .popup-info.active {
-    opacity: 1; /* Visible when active */
-    pointer-events: auto; /* Enable pointer events */
-    transform: translate(-50%, -50%) scale(1); /* Scale up */
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
 }
 
-/* Styling for the popup information box heading */
+/* Styling for the heading within the popup information box */
 .popup-info h2 {
-    font-size: 50px; /* Font size */
-    color: #c40094; /* Text color */
+    font-size: 50px;
+    color: red;
 }
 
-/* Styling for the informational text in the popup */
+/* Styling for information items within the popup */
 .popup-info .info {
-    display: inline-block; /* Inline block display */
-    font-size: 16px; /* Font size */
-    color: #333; /* Text color */
-    font-weight: 500; /* Font weight */
-    margin: 4px 0; /* Margin */
+    display: inline-block;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+    margin: 4px 0;
 }
 
+/* Styling for level buttons within the popup */
 .popup-info .level-buttons {
     display: flex;
-    flex-direction: column; /* Arrange buttons in a column */
+    flex-direction: column;
     align-items: center;
     margin-top: 20px;
 }
 
+/* Styling for easy, medium, and hard buttons within the popup */
 .popup-info .level-buttons .easy-btn,
 .popup-info .level-buttons .medium-btn,
 .popup-info .level-buttons .hard-btn {
     width: 100%;
     height: 50px;
-    margin: 7px 0; /* Adjust the vertical spacing as needed */
+    margin: 7px 0;
     background: transparent;
     font-size: 16px;
     border: none;
@@ -191,357 +215,380 @@ body {
     transition: background-color .3s ease-in-out;
 }
 
+/* Styling for the easy button on hover */
 .popup-info .level-buttons .easy-btn:hover {
-    background-color: green; /* Change hover color for easy button */
+    background-color: green;
     color: white;
 }
 
+/* Styling for the active state of the easy button */
+.popup-info .level-buttons .easy-btn.active {
+    background-color: green;
+    color: white;
+}
+
+/* Styling for the medium button on hover */
 .popup-info .level-buttons .medium-btn:hover {
-    background-color: orange; /* Change hover color for medium button */
+    background-color: orange;
     color: white;
 }
 
+/* Styling for the active state of the medium button */
+.popup-info .level-buttons .medium-btn.active {
+    background-color: orange;
+    color: white;
+}
+
+/* Styling for the hard button on hover */
 .popup-info .level-buttons .hard-btn:hover {
-    background-color: red; /* Change hover color for hard button */
+    background-color: red;
     color: white;
 }
 
-/* Styling for the button group in the popup */
+/* Styling for the active state of the hard button */
+.popup-info .level-buttons .hard-btn.active {
+    background-color: red;
+    color: white;
+}
+
+/* Styling for the button group within the popup */
 .popup-info .btn-group {
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space between items */
-    align-items: center; /* Align items vertically */
-    border-top: 1px solid #999; /* Top border */
-    margin-top: 10px; /* Top margin */
-    padding: 15px 0 7px; /* Padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #999;
+    margin-top: 10px;
+    padding: 15px 0 7px;
 }
 
-/* Styling for the buttons in the popup */
+/* Styling for information buttons within the button group */
 .popup-info .btn-group .info-btn {
-    display: inline-flex; /* Inline flex display */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    width: 130px; /* Button width */
-    height: 45px; /* Button height */
-    background: #c40094; /* Background color */
-    border: 2px solid #c40094; /* Border style */
-    outline: none; /* Remove outline */
-    border-radius: 6px; /* Border radius */
-    text-decoration: none; /* Remove text decoration */
-    font-size: 16px; /* Font size */
-    color: #fff; /* Text color */
-    font-weight: 600; /* Font weight */
-    box-shadow: 0 0 10px rgba(0, 0, 0, .1); /* Box shadow */
-    cursor: pointer; /* Pointer cursor */
-    transition: .5s; /* Smooth transition effect */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 45px;
+    background: red;
+    border: 2px solid red;
+    outline: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    transition: .5s;
 }
 
-/* Styling for the first button in the button group */
+/* Styling for the first information button */
 .popup-info .btn-group .info-btn:nth-child(1) {
-    background: transparent; /* Transparent background */
-    color: #c40094; /* Text color */
+    background: transparent;
+    color: red;
 }
 
-/* Hover state for the first button in the button group */
+/* Styling for the first information button on hover */
 .popup-info .btn-group .info-btn:nth-child(1):hover {
-    background: #c40094; /* Change background color on hover */
-    color: #fff; /* Change text color on hover */
+    background: red;
+    color: #fff;
 }
 
+/* Styling for the second information button */
 .popup-info .btn-group .info-btn:nth-child(2) {
     pointer-events: none;
     transition: .5s;
 }
 
+/* Styling for the active state of the second information button */
 .popup-info .btn-group .info-btn:nth-child(2).active {
     pointer-events: auto;
-    background: #c40094; /* Background color */
-    border-color: #c40094; /* Border color */
-    color: #fff; /* Text color */
+    background: red;
+    border-color: red;
+    color: #fff;
 }
 
-/* Hover state for the second button in the button group */
+/* Styling for the second information button on hover */
 .popup-info .btn-group .info-btn:nth-child(2):hover {
-    background: #950170; /* Change background color on hover */
-    border-color: #950170; /* Change border color on hover */
+    background: darkred;
+    border-color: darkred;
 }
 
 /* Styling for the quiz section */
 .quiz-section {
-    position: relative; /* Relative positioning */
-    left: -50%; /* Shift content to the left */
-    width: 100%; /* Full width */
-    background: #09001d; /* Background color */
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    z-index: 100; /* Layer order (above other elements) */
-    transition: .8s ease-in-out; /* Smooth transition effect */
-    transition-delay: .25s; /* Delayed transition */
+    position: relative;
+    left: -50%;
+    width: 100%;
+    background: #09001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
 }
 
-/* Active state for the quiz section */
+/* Styling for the active state of the quiz section */
 .quiz-section.active {
-    left: 0; /* Slide content to the left */
+    left: 0;
 }
 
-/* Styling for the quiz box */
+/* Styling for the quiz box within the quiz section */
 .quiz-section .quiz-box {
-    position: relative; /* Relative positioning */
-    width: 500px; /* Box width */
-    background: transparent; /* Transparent background */
-    border: 2px solid #c40094; /* Border style */
-    border-radius: 6px; /* Border radius */
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Stack items vertically */
-    padding: 20px 30px; /* Padding */
-    opacity: 0; /* Hidden by default */
-    pointer-events: none; /* Disable pointer events */
-    transform: scale(.9); /* Scale down */
-    transition: .3s ease; /* Smooth transition effect */
-    transition-delay: 0s; /* No delay */
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid red;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+    transition: .3s ease;
+    transition-delay: 0s;
 }
 
-/* Active state for the quiz box */
+/* Styling for the active state of the quiz box */
 .quiz-section .quiz-box.active {
-    opacity: 1; /* Visible when active */
-    pointer-events: auto; /* Enable pointer events */
-    transform: scale(1); /* Normal scale */
-    transition: 1s ease; /* Smooth transition effect */
-    transition-delay: 1s; /* Delayed transition */
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: 1s ease;
+    transition-delay: 1s;
 }
 
-/* Styling for the quiz box heading */
+/* Styling for the heading within the quiz box */
 .quiz-box h1 {
-    font-size: 32px; /* Font size */
-    text-align: center; /* Center-align text */
-    background: linear-gradient(45deg, transparent, #c40094, transparent); /* Gradient background */
-    border-radius: 6px; /* Border radius */
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(45deg, transparent, red, transparent);
+    border-radius: 6px;
 }
 
-/* Styling for the quiz header */
+/* Styling for the header section within the quiz box */
 .quiz-box .quiz-header {
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space between items */
-    align-items: center; /* Align items vertically */
-    padding: 20px 0; /* Padding */
-    border-bottom: 2px solid #c40094; /* Bottom border */
-    margin-bottom: 30px; /* Bottom margin */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid red;
+    margin-bottom: 30px;
 }
 
-/* Styling for elements within the quiz header */
+/* Styling for spans within the quiz header */
 .quiz-header span {
-    font-size: 18px; /* Font size */
-    font-weight: 500; /* Font weight */
+    font-size: 18px;
+    font-weight: 500;
 }
 
-/* Styling for the header score */
+/* Styling for the header score section within the quiz header */
 .quiz-header .header-score {
-    background: #c40094; /* Background color */
-    border-radius: 3px; /* Border radius */
-    padding: 7px; /* Padding */
+    background: red;
+    border-radius: 3px;
+    padding: 7px;
 }
 
-/* Styling for the question text */
+/* Styling for the question text within the quiz box */
 .quiz-box .question-text {
-    font-size: 24px; /* Font size */
-    font-weight: 600; /* Font weight */
+    font-size: 24px;
+    font-weight: 600;
 }
 
-/* Styling for the option list */
+/* Styling for option elements within the option list */
 .option-list .option {
-    width: 100%; /* Full width */
-    padding: 12px; /* Padding */
-    background: transparent; /* Transparent background */
-    border: 2px solid rgba(255, 255, 255, .2); /* Border style */
-    border-radius: 4px; /* Border radius */
-    font-size: 17px; /* Font size */
-    margin: 15px 0; /* Margin */
-    cursor: pointer; /* Pointer cursor */
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 4px;
+    font-size: 17px;
+    margin: 15px 0;
+    cursor: pointer;
 }
 
-/* Hover state for options in the option list */
+/* Styling for options on hover */
 .option-list .option:hover {
-    background: rgba(255, 255, 255, .1); /* Change background color on hover */
-    border-color: rgba(255, 255, 255, .1); /* Change border color on hover */
+    background: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, .1);
 }
 
-/* Styling for correct options in the option list */
+/* Styling for correct options */
 .option-list .option.correct {
-    background: #09001d; /* Background color */
-    color: #00a63d; /* Text color */
-    border-color: #00a63d; /* Border color */
+    background: #09001d;
+    color: #00a63d;
+    border-color: #00a63d;
 }
 
-/* Styling for incorrect options in the option list */
+/* Styling for incorrect options */
 .option-list .option.incorrect {
-    background: #09001d; /* Background color */
-    color: #a60045; /* Text color */
-    border-color: #a60045; /* Border color */
+    background: #09001d;
+    color: #a60045;
+    border-color: #a60045;
 }
 
-/* Styling for disabled options in the option list */
+/* Styling for disabled options */
 .option-list .option.disabled {
-    pointer-events: none; /* Disable pointer events */
+    pointer-events: none; 
 }
 
 /* Styling for the quiz footer */
 .quiz-box .quiz-footer {
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space between items */
-    align-items: center; /* Align items vertically */
-    border-top: 2px solid #c40094; /* Top border */
-    padding-top: 20px; /* Top padding */
-    margin-top: 25px; /* Top margin */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid red;
+    padding-top: 20px;
+    margin-top: 25px;
 }
 
-/* Styling for the question total text in the quiz footer */
+/* Styling for the question total within the quiz footer */
 .quiz-footer .question-total {
-    font-size: 16px; /* Font size */
-    font-weight: 600; /* Font weight */
+    font-size: 16px;
+    font-weight: 600;
 }
 
-/* Styling for the next button in the quiz footer */
+/* Styling for the next button within the quiz footer */
 .quiz-footer .next-btn {
-    width: 100px; /* Button width */
-    height: 45px; /* Button height */
-    background: rgba(255, 255, 255, .1); /* Background color */
-    border: rgba(255, 255, 255, .1); /* Border style */
-    outline: none; /* Remove outline */
-    border-radius: 6px; /* Border radius */
-    font-size: 16px; /* Font size */
-    color: rgba(255, 255, 255, .3); /* Text color */
-    font-weight: 600; /* Font weight */
-    cursor: pointer; /* Pointer cursor */
-    pointer-events: none; /* Disable pointer events */
-    transition: .5s; /* Smooth transition effect */
+    width: 100px;
+    height: 45px;
+    background: rgba(255, 255, 255, .1);
+    border: rgba(255, 255, 255, .1);
+    outline: none;
+    border-radius: 6px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, .3);
+    font-weight: 600;
+    cursor: pointer;
+    pointer-events: none; 
+    transition: .5s; 
 }
 
-/* Active state for the next button */
+/* Styling for the active state of the next button */
 .quiz-footer .next-btn.active {
-    pointer-events: auto; /* Enable pointer events */
-    background: #c40094; /* Background color */
-    border-color: #c40094; /* Border color */
-    color: #fff; /* Text color */
+    pointer-events: auto; 
+    background: red;
+    border-color: red;
+    color: #fff;
 }
 
-/* Hover state for the active next button */
+/* Styling for the next button on hover in active state */
 .quiz-footer .next-btn.active:hover {
-    background: #950170; /* Change background color on hover */
-    border-color: #950170; /* Change border color on hover */
+    background: DARKRED;
+    border-color: DARKRED;
 }
 
-/* Styling for the result box */
+/* Styling for the result box within the quiz section */
 .quiz-section .result-box {
-    position: absolute; /* Absolute positioning */
-    top: 50%; /* Position at the vertical center */
-    left: 50%; /* Position at the horizontal center */
-    transform: translate(-50%, -50%) scale(.9); /* Center and scale down */
-    width: 500px; /* Box width */
-    background: transparent; /* Transparent background */
-    border: 2px solid #c40094; /* Border style */
-    border-radius: 6px; /* Border radius */
-    padding: 20px; /* Padding */
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center content horizontally */
-    opacity: 0; /* Hidden by default */
-    pointer-events: none; /* Disable pointer events */
-    transition: .3s ease; /* Smooth transition effect */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.9);
+    width: 500px;
+    background: transparent;
+    border: 2px solid red;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease;
 }
 
-/* Active state for the result box */
+/* Styling for the active state of the result box */
 .quiz-section .result-box.active {
-    opacity: 1; /* Visible when active */
-    pointer-events: auto; /* Enable pointer events */
-    transform: translate(-50%, -50%) scale(1); /* Scale up */
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
 }
 
-/* Styling for the result box heading */
+/* Styling for the heading within the result box */
 .result-box h2 {
-    font-size: 52px; /* Font size */
+    font-size: 52px;
 }
 
-/* Styling for the percentage container in the result box */
+/* Styling for the percentage container within the result box */
 .result-box .percentage-container {
-    width: 300px; /* Container width */
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center content horizontally */
-    margin: 20px 0 40px; /* Margin */
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0 40px;
 }
 
-/* Styling for the circular progress bar */
+/* Styling for the circular progress bar within the percentage container */
 .percentage-container .circular-progress {
-    position: relative; /* Relative positioning */
-    width: 250px; /* Progress bar width */
-    height: 250px; /* Progress bar height */
-    background: conic-gradient(#c40094 3.6deg, rgba(255, 255, 255, .1) 0deg); /* Gradient background */
-    border-radius: 50%; /* Border radius */
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background: conic-gradient(red 3.6deg, rgba(255, 255, 255, .1) 0deg);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Styling for the circular progress bar background */
+/* Styling for the circular progress bar's background */
 .percentage-container .circular-progress::before {
-    content: ''; /* Empty content */
-    position: absolute; /* Absolute positioning */
-    width: 210px; /* Background width */
-    height: 210px; /* Background height */
-    background: #09001d; /* Background color */
-    border-radius: 50%; /* Border radius */
+    content: '';
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    background: #09001d;
+    border-radius: 50%;
 }
 
-/* Styling for the progress value inside the circular progress bar */
+/* Styling for the progress value within the circular progress bar */
 .circular-progress .progress-value {
-    position: relative; /* Relative positioning */
-    font-size: 45px; /* Font size */
-    font-weight: 600; /* Font weight */
+    position: relative;
+    font-size: 45px;
+    font-weight: 600;
 }
 
-/* Styling for the score text in the result box */
+/* Styling for the score text within the result box */
 .percentage-container .score-text {
-    font-size: 26px; /* Font size */
-    font-weight: 600; /* Font weight */
-    margin-top: 20px; /* Top margin */
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 20px;
 }
 
-/* Styling for the buttons in the result box */
+/* Styling for buttons within the result box */
 .result-box .buttons {
-    display: flex; /* Use flexbox for layout */
+    display: flex;
 }
 
-/* Styling for all buttons within the result box */
+/* Styling for button elements within the buttons section */
 .buttons button {
-    width: 130px; /* Button width */
-    height: 47px; /* Button height */
-    background: #c40094; /* Background color */
-    border: 2px solid #c40094; /* Border style */
-    outline: none; /* Remove outline */
-    border-radius: 6px; /* Border radius */
-    font-size: 16px; /* Font size */
-    color: #fff; /* Text color */
-    font-weight: 600; /* Font weight */
-    margin: 0 20px 20px; /* Margin */
-    cursor: pointer; /* Pointer cursor */
+    width: 130px;
+    height: 47px;
+    background: red;
+    border: 2px solid red;
+    outline: none;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    margin: 0 20px 20px;
+    cursor: pointer;
     transition: .5s; /* Smooth transition effect */
 }
 
-/* Hover state for the first button in the result box */
+/* Styling for the first button on hover */
 .buttons button:nth-child(1):hover {
-    background: #950170; /* Change background color on hover */
-    border-color: #950170; /* Change border color on hover */
+    background: DARKRED;
+    border-color: DARKRED;
 }
 
-/* Styling for the second button in the result box */
+/* Styling for the second button */
 .buttons button:nth-child(2) {
-    background: transparent; /* Transparent background */
-    color: #c40094; /* Text color */
+    background: transparent;
+    color: red;
 }
 
-/* Hover state for the second button in the result box */
+/* Styling for the second button on hover */
 .buttons button:nth-child(2):hover {
-    background: #c40094; /* Change background color on hover */
-    color: #fff; /* Change text color on hover */
+    background: red;
+    color: #fff;
 }
