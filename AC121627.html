@@ -2,119 +2,121 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" /> <!-- Define the character encoding for the document -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Set compatibility mode for Internet Explorer -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configure viewport settings for responsive design -->
-    <title>Te Reo Māori Quiz</title> <!-- Set the document title -->
-    <link rel="stylesheet" href="style.css"> <!-- Link to an external CSS stylesheet -->
+    <meta charset="UTF-8" /> 
+    <title>Te Reo Māori Quiz</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <main class="main">
-        <header class="header">
-            <a href="#" class="logo">MāoriQuiz.</a> <!-- Logo link to the home page -->
 
-            <nav class="navbar">
-                <a href="" class="active">Home</a> <!-- Navigation links -->
-            </nav>
-        </header>
+    <main class="main">
 
         <div class="container">
+
             <section class="quiz-section">
+
                 <div class="quiz-box">
+
                     <h1>Māori Quiz</h1> <!-- Quiz title -->
 
                     <div class="quiz-header">
+
                         <span>Maori Quiz</span> <!-- Quiz header text -->
                         <span class="header-score">Score: 0 / 5</span> <!-- Display user's score -->
+
                     </div>
 
                     <h2 class="question-text">What is the Māori word for Hello?</h2> <!-- Quiz question -->
 
-                    <div class="option-list">
-                        <!-- Options for the quiz question (commented out) -->
-                        <!-- <div class="option">
-                            <span>A. Papa</span>
-                        </div>
-                        <div class="option">
-                            <span>B. Kia Ora</span>
-                        </div>
-                        <div class="option">
-                            <span>C. Manaakitanga</span>
-                        </div>
-                        <div class="option">
-                            <span>D. Haere ra</span>
-                        </div> -->
-                    </div>
+                    <div class="option-list"><!-- The html code is generated in the "PlayQuiz" JavaScript file --></div>
 
                     <div class="quiz-footer">
+
                         <span class="question-total">1 of 5 Questions</span> <!-- Display question number -->
                         <button class="next-btn">Next</button> <!-- Button to navigate to the next question -->
+
                     </div>
+
                 </div>
 
                 <div class="result-box">
+
                     <h2>Quiz Result!</h2> <!-- Result title -->
 
                     <div class="percentage-container">
+
                         <div class="circular-progress">
+                            
                             <span class="progress-value">0%</span> <!-- Display user's score as a percentage -->
+
                         </div>
 
                         <span class="score-text">Your score 0 out of 5</span> <!-- Display user's final score -->
                     </div>
 
                     <div class="buttons">
+
                         <button class="tryAgain-btn">Try Again</button> <!-- Button to retry the quiz -->
                         <button class="goHome-btn">Go To Home</button> <!-- Button to return to the home page -->
+
                     </div>
+
                 </div>
+
             </section>
 
             <section class="home">
+
                 <div class="home-content">
+
                     <h1>Te Reo Māori Quiz</h1> <!-- Home page title -->
-                    <p>
+
                         <!-- Description of the quiz -->
-                        Test your knowledge of the Māori language with our quiz. The quiz consists of 3 levels, each
+                    <p> Test your knowledge of the Māori language with our quiz. The quiz consists of 3 levels, each
                         containing 5 questions. You'll have the opportunity to answer a series of questions related to
                         Māori words.
                         <br><br>Choose your level, and see how many questions you can answer correctly!
                     </p>
+                    
                     <button class="start-btn">Start Quiz</button> <!-- Button to start the quiz -->
+
                 </div>
+
             </section>
+
         </div>
+
     </main>
 
     <div class="popup-info">
+
         <h2>Choose A Level</h2> <!-- Popup information title -->
 
-       <!-- <span class="info">1. This is how to play the Te reo </span>
-        <span class="info">2. This is how to play the Te reo Maori quiz</span>
-        <span class="info">3. This is how to play the Te </span>
-        <span class="info">4. This is how to play the Te reo Maori quiz</span>
-        <span class="info">5. This is how to play the Te reo Maori quiz</span> -->
-
         <div class = "level-buttons">
+
             <button class = "easy-btn">Easy</button>
             <button class = "medium-btn">Medium</button>
             <button class = "hard-btn">Hard</button>
+
         </div>
 
         <div class="btn-group">
+
             <button class="info-btn exit-btn">Exit Quiz</button> <!-- Button to exit the quiz -->
             <a href="#" class="info-btn continue-btn">Continue</a> <!-- Button to continue -->
+
         </div>
+
     </div>
 
     <div class="footer">
+
         <a href = "https://github.com/ac121627/TPI" target="_blank">All Credits Reserved To Faiaz Abdullah for creating this website.</a>
+
     </div>
     
-    <script src="questions.js"></script> <!-- Include JavaScript file for quiz questions -->
-    <script src="PlayQuiz.js"></script> <!-- Include JavaScript file for script functionality -->
+    <script src="questions.js"></script> 
+    <script src="PlayQuiz.js"></script>
 
 </body>
-
 </html>

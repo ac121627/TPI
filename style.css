@@ -12,7 +12,7 @@
 /* Styling the background of the body and setting text color */
 body {
     color: #fff;
-    background: #09001d;
+    background: black;
     overflow: hidden; 
 }
 
@@ -28,32 +28,6 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-}
-
-/* Styling for the logo in the header */
-.logo {
-    pointer-events: none;
-    font-size: 32px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-    filter: drop-shadow(0 0 5px #09001d); /* Adding a drop shadow to the logo */
-}
-
-/* Styling for the navigation links in the header */
-.navbar a {
-    font-size: 18px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
-    transition: .3s; 
-}
-
-/* Styling for navigation links on hover and when active */
-.navbar a:hover,
-.navbar a.active {
-    color: red; 
 }
 
 /* Main content section styling */
@@ -149,12 +123,12 @@ body {
     letter-spacing: 1px;
     font-weight: 600;
     cursor: pointer;
-    transition: .5s; /* Smooth transition effect */
+    transition: .5s; 
 }
 
 /* Styling for the start button on hover */
 .home-content .start-btn:hover {
-    background: #09001d;
+    background: black;
     box-shadow: none; 
 }
 /* Styling for the popup information box */
@@ -319,7 +293,7 @@ body {
     position: relative;
     left: -50%;
     width: 100%;
-    background: #09001d;
+    background: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -416,14 +390,14 @@ body {
 
 /* Styling for correct options */
 .option-list .option.correct {
-    background: #09001d;
+    background: black;
     color: #00a63d;
     border-color: #00a63d;
 }
 
 /* Styling for incorrect options */
 .option-list .option.incorrect {
-    background: #09001d;
+    background: black;
     color: #a60045;
     border-color: #a60045;
 }
@@ -475,8 +449,8 @@ body {
 
 /* Styling for the next button on hover in active state */
 .quiz-footer .next-btn.active:hover {
-    background: DARKRED;
-    border-color: DARKRED;
+    background: darkred;
+    border-color: darkred;
 }
 
 /* Styling for the result box within the quiz section */
@@ -524,7 +498,6 @@ body {
     position: relative;
     width: 250px;
     height: 250px;
-    background: conic-gradient(red 3.6deg, rgba(255, 255, 255, .1) 0deg);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -537,7 +510,7 @@ body {
     position: absolute;
     width: 210px;
     height: 210px;
-    background: #09001d;
+    background: black;
     border-radius: 50%;
 }
 
@@ -573,13 +546,13 @@ body {
     font-weight: 600;
     margin: 0 20px 20px;
     cursor: pointer;
-    transition: .5s; /* Smooth transition effect */
+    transition: .5s; 
 }
 
 /* Styling for the first button on hover */
 .buttons button:nth-child(1):hover {
-    background: DARKRED;
-    border-color: DARKRED;
+    background: darkred;
+    border-color: darkred;
 }
 
 /* Styling for the second button */

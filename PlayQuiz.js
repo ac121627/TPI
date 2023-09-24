@@ -18,6 +18,7 @@ let questionsSelected; // Used for the questions and changes depending on the le
 
 // Event handler for the start button click
 startBtn.onclick = () => {
+    
     // Show popup info and activate the main content
     popupInfo.classList.add('active');
     main.classList.add('active');
@@ -25,6 +26,7 @@ startBtn.onclick = () => {
 
 // Event handler for the exit button click in the popup
 exitBtn.onclick = () => {
+
     // Hide popup info and deactivate the main content
     popupInfo.classList.remove('active');
     main.classList.remove('active');
@@ -57,6 +59,7 @@ hardBtn.onclick = () => {
 
 // Event handler for the continue button click
 continueBtn.onclick = () => {
+
     // Activate the quiz section and deactivate popup info and main content
     quizSection.classList.add('active');
     popupInfo.classList.remove('active');
@@ -73,6 +76,7 @@ continueBtn.onclick = () => {
 
 // Event handler for the try again button click
 tryAgainBtn.onclick = () => {
+
     // Activate the quiz box, deactivate the next button and result box
     quizBox.classList.add('active');
     nextBtn.classList.remove('active');
@@ -91,6 +95,7 @@ tryAgainBtn.onclick = () => {
 
 // Event handler for the go home button click
 goHomeBtn.onclick = () => {
+    
     // Deactivate the quiz section, next button, and result box
     quizSection.classList.remove('active');
     nextBtn.classList.remove('active');
@@ -119,6 +124,7 @@ const nextBtn = document.querySelector('.next-btn');
 
 // Event handler for the next button click
 nextBtn.onclick = () => {
+
     if (questionCount < questionsSelected.length - 1) {
         // If there are more questions, move to the next question
         questionCount++;
@@ -141,6 +147,7 @@ const optionList = document.querySelector('.option-list');
 
 // Function to display questions and options from the questions array
 function showQuestions(index) {
+    
     // Select the HTML element where the question text will be displayed
     const questionText = document.querySelector('.question-text');
 
@@ -177,6 +184,7 @@ function optionSelected(answer) {
         userScore += 1;
         headerScore();
     } else {
+
         // If the user's answer is incorrect, update the UI and show the correct answer
         answer.classList.add('incorrect');
 
@@ -211,6 +219,7 @@ function headerScore() {
 
 // Function to display the result box
 function showResultBox() {
+
     // Deactivate the quiz box and activate the result box
     quizBox.classList.remove('active');
     resultBox.classList.add('active');
@@ -230,6 +239,7 @@ function showResultBox() {
 
     // Create an interval to animate the progress bar
     let progress = setInterval(() => {
+
         progressStartValue++; // Increment the progress value
 
         // Update the displayed progress value and the progress bar background
@@ -240,5 +250,6 @@ function showResultBox() {
         if (progressStartValue == progressEndValue) {
             clearInterval(progress); // Stop the animation interval
         }
+
     }, speed); // Set the animation speed
 }
